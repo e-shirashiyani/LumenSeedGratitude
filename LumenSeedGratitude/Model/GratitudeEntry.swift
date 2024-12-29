@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct GratitudeEntry: Identifiable, Codable, Equatable {
+    let id: UUID
+    var text: String
+    var date: Date
+}

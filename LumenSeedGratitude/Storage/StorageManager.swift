@@ -6,13 +6,35 @@
 //
 
 import SwiftUI
+import Foundation
 
-struct StorageManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class StorageManager {
+    static let shared = StorageManager()
+
+    private let entriesKey = "GratitudeEntriesKey"
+    private let encoder = JSONEncoder()
+    private let decoder = JSONDecoder()
+
+    private init() {}
+
+    func saveEntries(_ entries: [GratitudeEntry]) {
+        do {
+            let data = try encoder.encode(entries)
+            UserDefaults.standard.set(data, forKey: entriesKey)
+        } catch {
+            print("Failed to save entries: \(error)")
+        }
     }
-}
 
-#Preview {
-    StorageManager()
+    func loadEntries() -> [GratitudeEntry] {
+        guard let data = UserDefaults.standard.data(forKey: entriesKey) else {
+            return []
+        }
+        do {
+            return try decoder.decode([GratitudeEntry].self, from: data)
+        } catch {
+            print("Failed to load entries: \(error)")
+            return []
+        }
+    }
 }

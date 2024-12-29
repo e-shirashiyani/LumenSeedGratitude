@@ -15,6 +15,16 @@
 		B8252B332CFF83700047D01E /* LumenSeedGratitudeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B322CFF83700047D01E /* LumenSeedGratitudeTests.swift */; };
 		B8252B3D2CFF83700047D01E /* LumenSeedGratitudeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B3C2CFF83700047D01E /* LumenSeedGratitudeUITests.swift */; };
 		B8252B3F2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */; };
+		B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4B2CFF83D40047D01E /* AppDelegate.swift */; };
+		B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */; };
+		B8252B512CFF84200047D01E /* PastEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B502CFF84200047D01E /* PastEntriesView.swift */; };
+		B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B532CFF84380047D01E /* GratitudeEntry.swift */; };
+		B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B552CFF844C0047D01E /* NewEntryView.swift */; };
+		B872F4D22CFF882A00C58393 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D12CFF882A00C58393 /* Color.swift */; };
+		B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D42D001B3300C58393 /* StorageManager.swift */; };
+		B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */; };
+		B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */; };
+		B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA93232D195C1000158680 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,17 @@
 		B8252B382CFF83700047D01E /* LumenSeedGratitudeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LumenSeedGratitudeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8252B3C2CFF83700047D01E /* LumenSeedGratitudeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeUITests.swift; sourceTree = "<group>"; };
 		B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8252B4B2CFF83D40047D01E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
+		B8252B502CFF84200047D01E /* PastEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEntriesView.swift; sourceTree = "<group>"; };
+		B8252B532CFF84380047D01E /* GratitudeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeEntry.swift; sourceTree = "<group>"; };
+		B8252B552CFF844C0047D01E /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		B872F4D12CFF882A00C58393 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B872F4D42D001B3300C58393 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeTimeScreen.swift; sourceTree = "<group>"; };
+		B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerHelper.swift; sourceTree = "<group>"; };
+		B89CD7A82D20636C00070F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8EA93232D195C1000158680 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +117,18 @@
 		B8252B1E2CFF836F0047D01E /* LumenSeedGratitude */ = {
 			isa = PBXGroup;
 			children = (
+				B89CD7A82D20636C00070F26 /* Info.plist */,
+				B89CD7A52D20613300070F26 /* Helper */,
+				B872F4D32D001B2900C58393 /* Storage */,
+				B872F4D02CFF882400C58393 /* UI */,
+				B8252B522CFF842F0047D01E /* Model */,
+				B8252B4D2CFF83EF0047D01E /* Views */,
 				B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */,
 				B8252B212CFF836F0047D01E /* ContentView.swift */,
 				B8252B232CFF836F0047D01E /* Item.swift */,
 				B8252B252CFF83700047D01E /* Assets.xcassets */,
 				B8252B272CFF83700047D01E /* Preview Content */,
+				B8252B4B2CFF83D40047D01E /* AppDelegate.swift */,
 			);
 			path = LumenSeedGratitude;
 			sourceTree = "<group>";
@@ -128,6 +156,50 @@
 				B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */,
 			);
 			path = LumenSeedGratitudeUITests;
+			sourceTree = "<group>";
+		};
+		B8252B4D2CFF83EF0047D01E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */,
+				B8252B502CFF84200047D01E /* PastEntriesView.swift */,
+				B8252B552CFF844C0047D01E /* NewEntryView.swift */,
+				B8EA93232D195C1000158680 /* SplashScreenView.swift */,
+				B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8252B522CFF842F0047D01E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8252B532CFF84380047D01E /* GratitudeEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B872F4D02CFF882400C58393 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B872F4D12CFF882A00C58393 /* Color.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B872F4D32D001B2900C58393 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B872F4D42D001B3300C58393 /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B89CD7A52D20613300070F26 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,9 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */,
+				B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */,
+				B8252B512CFF84200047D01E /* PastEntriesView.swift in Sources */,
+				B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */,
+				B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */,
+				B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */,
+				B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */,
+				B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */,
 				B8252B222CFF836F0047D01E /* ContentView.swift in Sources */,
 				B8252B242CFF836F0047D01E /* Item.swift in Sources */,
+				B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */,
 				B8252B202CFF836F0047D01E /* LumenSeedGratitudeApp.swift in Sources */,
+				B872F4D22CFF882A00C58393 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,24 +505,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
-				DEVELOPMENT_TEAM = 335ANAU3W5;
+				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumenSeedGratitude/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LumenSeed;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to record your voice for speech-to-text functionality.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to allow you to dictate your gratitude entries.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.LumenSeedGratitude;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,24 +545,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
-				DEVELOPMENT_TEAM = 335ANAU3W5;
+				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumenSeedGratitude/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LumenSeed;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to record your voice for speech-to-text functionality.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to allow you to dictate your gratitude entries.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.LumenSeedGratitude;
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
