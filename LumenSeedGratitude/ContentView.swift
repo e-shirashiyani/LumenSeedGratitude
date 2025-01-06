@@ -57,6 +57,7 @@ struct ContentView: View {
                                         Text("• \(entry.text)")
                                             .font(.body)
                                             .foregroundColor(.textDarkCharcoal)
+                                            .multilineTextAlignment(.leading)
                                     }
                                     // Add "..." if there are more than 4 entries
                                     if dailyEntries.count > 4 {
@@ -64,12 +65,15 @@ struct ContentView: View {
                                             .font(.subheadline)
                                             .foregroundColor(.textSoftGray)
                                             .italic()
+                                            .multilineTextAlignment(.leading) 
                                     }
                                 }
+                                .frame(maxWidth: .infinity,alignment: .leading)
                                 .padding()
-                                .background(Color.white)
+                                .background(.lumenWhite)
                                 .cornerRadius(10)
                                 .shadow(radius: 2)
+                                
                             }
                             .padding(.horizontal)
                         }
@@ -80,12 +84,12 @@ struct ContentView: View {
                 Spacer()
                 
                 // Navigation Button
-                NavigationLink(destination: NewEntryView(entries: $entries)) {
+                NavigationLink(destination: NewEntryView2(entries: $entries)) {
                     Text("Add a New Gratitude 🌱")
                         .frame(maxWidth: .infinity)
                         .padding()
                         .background(Color.darkBackground)
-                        .foregroundColor(.white)
+                        .foregroundColor(.lumenWhite)
                         .fontWeight(.bold)
                         .cornerRadius(10)
                 }

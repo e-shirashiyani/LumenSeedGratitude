@@ -33,7 +33,7 @@ struct GratitudeTimeScreen: View {
             DatePicker("Select Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
                 .datePickerStyle(WheelDatePickerStyle())
                 .labelsHidden()
-                .accentColor(.darkBackground) // Match your app's theme color
+                .accentColor(.darkBackground) 
 
             Spacer()
 
@@ -45,7 +45,7 @@ struct GratitudeTimeScreen: View {
             }) {
                 Text("Set Reminder")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.lumenWhite)
                     .padding()
                     .frame(maxWidth: .infinity)
                     .background(Color.darkBackground)

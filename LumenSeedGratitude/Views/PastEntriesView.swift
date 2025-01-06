@@ -22,13 +22,13 @@ struct PastEntriesView: View {
                         .foregroundColor(.textSoftGray)
                 }
                 .padding(5)
-                .background(Color.accentSkyBlue.opacity(0.2))
+//                .background(Color.accentSkyBlue.opacity(0.2))
                 .cornerRadius(8)
             }
-            .listRowBackground(Color.backgroundMint)
+//            .listRowBackground(Color.backgroundMint)
         }
         .listStyle(InsetGroupedListStyle())
-        .background(Color.backgroundMint.edgesIgnoringSafeArea(.all))
+//        .background(Color.backgroundMint.edgesIgnoringSafeArea(.all))
         .navigationTitle("Past Entries")
     }
 }

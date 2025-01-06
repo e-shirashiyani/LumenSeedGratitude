@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-extension Color {
-    static let softBackgroundMint = Color(hex: "#C7E8D1")
-    static let backgroundMint = Color(hex: "#DFF7E1")
-    static let background = Color(hex: "#EEEEEE")
-    static let backgroundLavender = Color(hex: "#F3E8FD")
-    static let buttonPeach = Color(hex: "#FFD6A5")
-    static let buttonCoral = Color(hex: "#FFABAB")
-    static let textDarkCharcoal = Color(hex: "#3C3C3C")
-    static let textSoftGray = Color(hex: "#707070")
-    static let accentSkyBlue = Color(hex: "#AEEAF2")
-    static let accentCalmYellow = Color(hex: "#FFF8A5")
-    static let lGreen = Color(hex: "#7BC74D")
-    static let darkBackground = Color(hex: "#393E46")
-    static let lightBackground = Color(hex: "#eeeeee")
-
-}
+//extension Color {
+//    static let softBackgroundMint = Color(hex: "#C7E8D1")
+//    static let backgroundMint = Color(hex: "#DFF7E1")
+//    static let background = Color(hex: "#EEEEEE")
+//    static let backgroundLavender = Color(hex: "#F3E8FD")
+//    static let buttonPeach = Color(hex: "#FFD6A5")
+//    static let buttonCoral = Color(hex: "#FFABAB")
+//    static let textDarkCharcoal = Color(hex: "#3C3C3C")
+//    static let textSoftGray = Color(hex: "#707070")
+//    static let accentSkyBlue = Color(hex: "#AEEAF2")
+//    static let accentCalmYellow = Color(hex: "#FFF8A5")
+//    static let lumenGreen = Color(hex: "#7BC74D")
+//    static let darkBackground = Color(hex: "#393E46")
+//    static let lightBackground = Color(hex: "#eeeeee")
+//
+//}
 
 // Hex-to-Color Helper
 extension Color {

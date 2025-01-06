@@ -1,14 +1,13 @@
 //
-//  NewEntryView.swift
+//  NewEntryView2.swift
 //  LumenSeedGratitude
 //
-//  Created by e.shirashiyani on 12/3/24.
+//  Created by e.shirashiyani on 1/3/25.
 //
 
 import SwiftUI
-import Speech
 
-struct NewEntryView: View {
+struct NewEntryView2: View {
     @Binding var entries: [GratitudeEntry]
     @State private var newEntryText: String = ""
     @State private var currentSessionEntries: [String] = []
@@ -44,7 +43,6 @@ struct NewEntryView: View {
                     }
                     .padding(.horizontal, 20)
 
-                    // Gratitude Input with Mic
                     ZStack(alignment: .bottomTrailing) {
                         // Gratitude Input
                         TextEditor(text: $newEntryText)
@@ -52,13 +50,14 @@ struct NewEntryView: View {
                                 resetTimer() // Reset the inactivity timer on text change
                             }
                             .onAppear {
-                                startPromptCycle() // Start the automatic prompt cycle
+                                typingPrompt = "I am grateful for ..." // Set the default placeholder
                             }
                             .padding(16)
+                            .scrollContentBackground(.hidden)
                             .background(
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.white)
+                                        .fill(Color.lumenWhite)
                                         .shadow(color: Color.black.opacity(0.1), radius: 6, x: 0, y: 4)
                                     RoundedRectangle(cornerRadius: 12)
                                         .stroke(Color.textSoftGray, lineWidth: 1)
@@ -70,7 +69,7 @@ struct NewEntryView: View {
                             .lineSpacing(4)
                             .padding(.horizontal)
                             .overlay(
-                                // Animated Placeholder Text
+                                // Static Placeholder Text
                                 VStack {
                                     if newEntryText.isEmpty {
                                         Text(typingPrompt)
@@ -84,7 +83,7 @@ struct NewEntryView: View {
                                     Spacer()
                                 }
                             )
-
+                        
                         // Mic Button
                         Button(action: {
                             toggleVoiceInput()
@@ -106,13 +105,13 @@ struct NewEntryView: View {
                                     .padding()
                                     .background(
                                         Circle()
-                                            .fill(Color.white)
-                                            .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 4)
+                                            .fill(Color.background)
+                                            .shadow(color: Color.background.opacity(0.2), radius: 6, x: 0, y: 4)
                                     )
                             }
                         }
-                        .padding(.trailing, 30) // Adjust padding from the right
-                        .padding(.bottom, 10)   // Adjust padding from the bottom
+                        .padding(.trailing, 30)
+                        .padding(.bottom, 10)
                     }
 
                     // Buttons for Gratitude Actions
@@ -125,7 +124,7 @@ struct NewEntryView: View {
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color.darkBackground)
-                                .foregroundColor(.white)
+                                .foregroundColor(.lumenWhite)
                                 .fontWeight(.bold)
                                 .cornerRadius(12)
                         }
@@ -150,11 +149,28 @@ struct NewEntryView: View {
                                             RoundedRectangle(cornerRadius: 12)
                                                 .stroke(Color.darkBackground, lineWidth: 1)
                                         )
-                                        .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2) // Subtle shadow
+                                        .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2)
                                 )
                         }
                         .disabled(currentSessionEntries.isEmpty)
                         .opacity(currentSessionEntries.isEmpty ? 0.5 : 1.0)
+                        
+                        Button(action: {
+                            // Immediately display a random prompt
+//                            displayRandomPromptWithTyping()
+                            
+                            // Start or reset the prompt cycle timer
+                            startPromptCycle()
+                        }) {
+                            Text("💡 Get Inspired")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.lumenGreen)
+                                .foregroundColor(.white)
+                                .fontWeight(.bold)
+                                .cornerRadius(12)
+                        }
+
                     }
                     .padding(.horizontal, 20)
 
@@ -199,10 +215,11 @@ struct NewEntryView: View {
         isRecording = false
         newEntryText += speechRecognizerHelper.transcribedText // Append transcribed text
 
-        // Restart the prompt cycle after recording stops
-        if newEntryText.isEmpty {
-            startPromptCycle()
-        }
+//        // Restart the prompt cycle after recording stops
+        typingPrompt = "I am grateful for ..."
+//        if newEntryText.isEmpty {
+//            startPromptCycle()
+//        }
     }
 
     // Automatic Prompt Logic
@@ -244,16 +261,7 @@ struct NewEntryView: View {
         }
     }
 }
-// Preview
-#Preview {
-    // Provide a mock binding for the entries
-    let mockEntries = [
-        GratitudeEntry(id: UUID(), text: "Grateful for a sunny day", date: Date()),
-        GratitudeEntry(id: UUID(), text: "Grateful for family and friends", date: Date())
-    ]
-    
-    // Use a constant binding for preview
-    @State var previewEntries = mockEntries
-    
-    return NewEntryView(entries: .constant(previewEntries))
-}
+
+//#Preview {
+//    NewEntryView2()
+//}

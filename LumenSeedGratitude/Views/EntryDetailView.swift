@@ -16,12 +16,12 @@ struct EntryDetailView: View {
         VStack(alignment: .leading, spacing: 10) {
             TextEditor(text: .constant(entry.text))
                 .padding()
-                .background(Color.backgroundLavender)
+//                .background(Color.backgroundLavender)
                 .cornerRadius(10)
                 .disabled(true)
 
             Text("Date: \(entry.date, style: .date)")
-                .foregroundColor(.textSoftGray)
+//                .foregroundColor(.textSoftGray)
                 .font(.subheadline)
 
             Spacer()
@@ -36,7 +36,7 @@ struct EntryDetailView: View {
                     Text("Delete")
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.buttonCoral)
+//                        .background(Color.buttonCoral)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
@@ -44,7 +44,7 @@ struct EntryDetailView: View {
             .padding(.vertical)
         }
         .padding()
-        .background(Color.backgroundMint)
+//        .background(Color.backgroundMint)
         .navigationTitle("Entry Details")
     }
 }
