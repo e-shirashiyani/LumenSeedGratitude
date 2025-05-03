@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,13 @@
 		B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */; };
 		B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */; };
 		B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E8391D2DC683D200B73156 /* StreakManager.swift */; };
+		B8E839262DC68A0700B73156 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E839252DC68A0700B73156 /* WidgetKit.framework */; };
+		B8E839282DC68A0700B73156 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E839272DC68A0700B73156 /* SwiftUI.framework */; };
+		B8E839392DC68A0900B73156 /* LumenSeedWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B8E839232DC68A0700B73156 /* LumenSeedWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B8E839412DC68AE800B73156 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D42D001B3300C58393 /* StorageManager.swift */; };
+		B8E839442DC68B2000B73156 /* GratitudeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B532CFF84380047D01E /* GratitudeEntry.swift */; };
+		B8E839452DC68E7E00B73156 /* GratitudePrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */; };
+		B8E839552DC698AD00B73156 /* StreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E8391D2DC683D200B73156 /* StreakManager.swift */; };
 		B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA93232D195C1000158680 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +52,28 @@
 			remoteGlobalIDString = B8252B1B2CFF836F0047D01E;
 			remoteInfo = LumenSeedGratitude;
 		};
+		B8E839372DC68A0900B73156 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8252B142CFF836F0047D01E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8E839222DC68A0700B73156;
+			remoteInfo = LumenSeedWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B8E8393A2DC68A0900B73156 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B8E839392DC68A0900B73156 /* LumenSeedWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B8252B1C2CFF836F0047D01E /* LumenSeedGratitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LumenSeedGratitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +100,25 @@
 		B89CD7A82D20636C00070F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudePrompts.swift; sourceTree = "<group>"; };
 		B8E8391D2DC683D200B73156 /* StreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakManager.swift; sourceTree = "<group>"; };
+		B8E839232DC68A0700B73156 /* LumenSeedWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LumenSeedWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E839252DC68A0700B73156 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B8E839272DC68A0700B73156 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B8EA93232D195C1000158680 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B8E8393D2DC68A0900B73156 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B8E839222DC68A0700B73156 /* LumenSeedWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B8E839292DC68A0700B73156 /* LumenSeedWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B8E8393D2DC68A0900B73156 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = LumenSeedWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B8252B192CFF836F0047D01E /* Frameworks */ = {
@@ -97,6 +142,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8E839202DC68A0700B73156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E839282DC68A0700B73156 /* SwiftUI.framework in Frameworks */,
+				B8E839262DC68A0700B73156 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +160,8 @@
 				B8252B1E2CFF836F0047D01E /* LumenSeedGratitude */,
 				B8252B312CFF83700047D01E /* LumenSeedGratitudeTests */,
 				B8252B3B2CFF83700047D01E /* LumenSeedGratitudeUITests */,
+				B8E839292DC68A0700B73156 /* LumenSeedWidget */,
+				B8E839242DC68A0700B73156 /* Frameworks */,
 				B8252B1D2CFF836F0047D01E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,6 +172,7 @@
 				B8252B1C2CFF836F0047D01E /* LumenSeedGratitude.app */,
 				B8252B2E2CFF83700047D01E /* LumenSeedGratitudeTests.xctest */,
 				B8252B382CFF83700047D01E /* LumenSeedGratitudeUITests.xctest */,
+				B8E839232DC68A0700B73156 /* LumenSeedWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +268,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B8E839242DC68A0700B73156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8E839252DC68A0700B73156 /* WidgetKit.framework */,
+				B8E839272DC68A0700B73156 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,10 +287,12 @@
 				B8252B182CFF836F0047D01E /* Sources */,
 				B8252B192CFF836F0047D01E /* Frameworks */,
 				B8252B1A2CFF836F0047D01E /* Resources */,
+				B8E8393A2DC68A0900B73156 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B8E839382DC68A0900B73156 /* PBXTargetDependency */,
 			);
 			name = LumenSeedGratitude;
 			productName = LumenSeedGratitude;
@@ -267,6 +335,28 @@
 			productReference = B8252B382CFF83700047D01E /* LumenSeedGratitudeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B8E839222DC68A0700B73156 /* LumenSeedWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8E8393E2DC68A0900B73156 /* Build configuration list for PBXNativeTarget "LumenSeedWidgetExtension" */;
+			buildPhases = (
+				B8E8391F2DC68A0700B73156 /* Sources */,
+				B8E839202DC68A0700B73156 /* Frameworks */,
+				B8E839212DC68A0700B73156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B8E839292DC68A0700B73156 /* LumenSeedWidget */,
+			);
+			name = LumenSeedWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LumenSeedWidgetExtension;
+			productReference = B8E839232DC68A0700B73156 /* LumenSeedWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -274,7 +364,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					B8252B1B2CFF836F0047D01E = {
@@ -287,6 +377,9 @@
 					B8252B372CFF83700047D01E = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = B8252B1B2CFF836F0047D01E;
+					};
+					B8E839222DC68A0700B73156 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -306,6 +399,7 @@
 				B8252B1B2CFF836F0047D01E /* LumenSeedGratitude */,
 				B8252B2D2CFF83700047D01E /* LumenSeedGratitudeTests */,
 				B8252B372CFF83700047D01E /* LumenSeedGratitudeUITests */,
+				B8E839222DC68A0700B73156 /* LumenSeedWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +422,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B8252B362CFF83700047D01E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E839212DC68A0700B73156 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,6 +478,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8E8391F2DC68A0700B73156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E839442DC68B2000B73156 /* GratitudeEntry.swift in Sources */,
+				B8E839412DC68AE800B73156 /* StorageManager.swift in Sources */,
+				B8E839452DC68E7E00B73156 /* GratitudePrompts.swift in Sources */,
+				B8E839552DC698AD00B73156 /* StreakManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -389,6 +501,11 @@
 			isa = PBXTargetDependency;
 			target = B8252B1B2CFF836F0047D01E /* LumenSeedGratitude */;
 			targetProxy = B8252B392CFF83700047D01E /* PBXContainerItemProxy */;
+		};
+		B8E839382DC68A0900B73156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8E839222DC68A0700B73156 /* LumenSeedWidgetExtension */;
+			targetProxy = B8E839372DC68A0900B73156 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -668,6 +785,64 @@
 			};
 			name = Release;
 		};
+		B8E8393B2DC68A0900B73156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PFG66P4HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumenSeedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LumenSeedWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique.LumenSeedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8E8393C2DC68A0900B73156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2PFG66P4HF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LumenSeedWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LumenSeedWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique.LumenSeedWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -703,6 +878,15 @@
 			buildConfigurations = (
 				B8252B492CFF83700047D01E /* Debug */,
 				B8252B4A2CFF83700047D01E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8E8393E2DC68A0900B73156 /* Build configuration list for PBXNativeTarget "LumenSeedWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8E8393B2DC68A0900B73156 /* Debug */,
+				B8E8393C2DC68A0900B73156 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

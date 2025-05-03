@@ -58,4 +58,22 @@ class StreakManager {
     private func saveLastEntryDate(_ date: Date) {
         UserDefaults.standard.set(date, forKey: lastEntryDateKey)
     }
+    
+    func calculateStreak(from entries: [GratitudeEntry]) -> Int {
+        guard !entries.isEmpty else { return 0 }
+
+        let calendar = Calendar.current
+        var streak = 0
+        var currentDate = Date()
+
+        for entry in entries {
+            if calendar.isDate(entry.date, inSameDayAs: currentDate) || calendar.isDate(entry.date, inSameDayAs: calendar.date(byAdding: .day, value: -streak, to: currentDate)!) {
+                streak += 1
+            } else {
+                break
+            }
+        }
+
+        return streak
+    }
 }
