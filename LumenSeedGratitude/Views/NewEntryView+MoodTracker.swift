@@ -1,13 +1,13 @@
 //
-//  NewEntryView2.swift
+//  NewEntryView+MoodTracker.swift
 //  LumenSeedGratitude
 //
-//  Created by e.shirashiyani on 1/3/25.
+//  Created by e.shirashiyani on 1/6/25.
 //
 
 import SwiftUI
 
-struct NewEntryView2: View {
+struct NewEntrView_MoodTracker: View {
     @Binding var entries: [GratitudeEntry]
     @State private var newEntryText: String = ""
     @State private var currentSessionEntries: [String] = []
@@ -17,10 +17,14 @@ struct NewEntryView2: View {
 
     // Gratitude prompts
     @State private var gratitudePrompts: [String] = GratitudePrompts.all
-
+    @State private var moodBasedPrompts: [String] = [] // Prompts based on mood
     @State private var typingPrompt: String = "" // The animated text
     @State private var promptTimer: Timer? = nil // Timer for inactivity
     @State private var isTyping: Bool = false // Flag to indicate typing animation
+
+    // Mood Selection
+    @State private var isMoodSelectionActive: Bool = false
+    @State private var selectedMood: String? = nil
 
     var body: some View {
         NavigationView {
@@ -83,7 +87,7 @@ struct NewEntryView2: View {
                                     Spacer()
                                 }
                             )
-                        
+
                         // Mic Button
                         Button(action: {
                             toggleVoiceInput()
@@ -154,13 +158,9 @@ struct NewEntryView2: View {
                         }
                         .disabled(currentSessionEntries.isEmpty)
                         .opacity(currentSessionEntries.isEmpty ? 0.5 : 1.0)
-                        
+
                         Button(action: {
-                            // Immediately display a random prompt
-//                            displayRandomPromptWithTyping()
-                            
-                            // Start or reset the prompt cycle timer
-                            startPromptCycle()
+                            isMoodSelectionActive = true // Activate mood selection
                         }) {
                             Text("💡 Get Inspired")
                                 .frame(maxWidth: .infinity)
@@ -170,7 +170,6 @@ struct NewEntryView2: View {
                                 .fontWeight(.bold)
                                 .cornerRadius(12)
                         }
-
                     }
                     .padding(.horizontal, 20)
 
@@ -180,12 +179,22 @@ struct NewEntryView2: View {
             }
             .navigationBarTitleDisplayMode(.inline)
         }
+        .sheet(isPresented: $isMoodSelectionActive) {
+            MoodSelectionView(selectedMood: $selectedMood, onMoodSelected: handleMoodSelection)
+        }
         .onDisappear {
             promptTimer?.invalidate()
             promptTimer = nil
         }
     }
 
+    private func handleMoodSelection(mood: String) {
+        selectedMood = mood
+        moodBasedPrompts = GratitudePrompts.prompts(for: mood)
+        typingPrompt = moodBasedPrompts.randomElement() ?? "I am grateful for ..."
+        isMoodSelectionActive = false
+    }
+    
     // Speech Recognition Logic
     private func toggleVoiceInput() {
         if isRecording {
@@ -199,7 +208,7 @@ struct NewEntryView2: View {
         // Stop random prompt animation and timer
         promptTimer?.invalidate()
         isTyping = false
-        typingPrompt = "" // Clear the typing prompt
+        typingPrompt = ""
 
         speechRecognizerHelper.startRecording { error in
             if let error = error {
@@ -213,7 +222,7 @@ struct NewEntryView2: View {
     private func stopRecording() {
         speechRecognizerHelper.stopRecording()
         isRecording = false
-        newEntryText += speechRecognizerHelper.transcribedText // Append transcribed text
+        newEntryText += speechRecognizerHelper.transcribedText
 
 //        // Restart the prompt cycle after recording stops
         typingPrompt = "I am grateful for ..."
@@ -245,7 +254,7 @@ struct NewEntryView2: View {
         guard !isTyping, let randomPrompt = gratitudePrompts.randomElement() else { return }
 
         isTyping = true
-        typingPrompt = "" // Clear the current prompt
+        typingPrompt = ""
 
         // Simulate typing animation
         var currentIndex = 0
@@ -263,5 +272,5 @@ struct NewEntryView2: View {
 }
 
 //#Preview {
-//    NewEntryView2()
+//    NewEntryView_MoodTracker()
 //}

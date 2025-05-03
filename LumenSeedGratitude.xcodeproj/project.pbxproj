@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8252B202CFF836F0047D01E /* LumenSeedGratitudeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */; };
-		B8252B222CFF836F0047D01E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B212CFF836F0047D01E /* ContentView.swift */; };
+		B8252B222CFF836F0047D01E /* GratitudeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B212CFF836F0047D01E /* GratitudeListView.swift */; };
 		B8252B242CFF836F0047D01E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B232CFF836F0047D01E /* Item.swift */; };
 		B8252B262CFF83700047D01E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8252B252CFF83700047D01E /* Assets.xcassets */; };
 		B8252B292CFF83700047D01E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8252B282CFF83700047D01E /* Preview Assets.xcassets */; };
@@ -17,15 +17,16 @@
 		B8252B3F2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */; };
 		B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4B2CFF83D40047D01E /* AppDelegate.swift */; };
 		B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */; };
-		B8252B512CFF84200047D01E /* PastEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B502CFF84200047D01E /* PastEntriesView.swift */; };
 		B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B532CFF84380047D01E /* GratitudeEntry.swift */; };
 		B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B552CFF844C0047D01E /* NewEntryView.swift */; };
 		B872F4D22CFF882A00C58393 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D12CFF882A00C58393 /* Color.swift */; };
 		B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D42D001B3300C58393 /* StorageManager.swift */; };
 		B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */; };
-		B89B7AF32D28641D0057B564 /* NewEntryView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89B7AF22D28641D0057B564 /* NewEntryView2.swift */; };
+		B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */; };
+		B89AAEB12D2C168200969943 /* MoodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89AAEB02D2C168200969943 /* MoodSelectionView.swift */; };
 		B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */; };
 		B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */; };
+		B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E8391D2DC683D200B73156 /* StreakManager.swift */; };
 		B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EA93232D195C1000158680 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,7 @@
 /* Begin PBXFileReference section */
 		B8252B1C2CFF836F0047D01E /* LumenSeedGratitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LumenSeedGratitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeApp.swift; sourceTree = "<group>"; };
-		B8252B212CFF836F0047D01E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8252B212CFF836F0047D01E /* GratitudeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeListView.swift; sourceTree = "<group>"; };
 		B8252B232CFF836F0047D01E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B8252B252CFF83700047D01E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8252B282CFF83700047D01E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -60,16 +61,17 @@
 		B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B8252B4B2CFF83D40047D01E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
-		B8252B502CFF84200047D01E /* PastEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastEntriesView.swift; sourceTree = "<group>"; };
 		B8252B532CFF84380047D01E /* GratitudeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeEntry.swift; sourceTree = "<group>"; };
 		B8252B552CFF844C0047D01E /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		B872F4D12CFF882A00C58393 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B872F4D42D001B3300C58393 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeTimeScreen.swift; sourceTree = "<group>"; };
-		B89B7AF22D28641D0057B564 /* NewEntryView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView2.swift; sourceTree = "<group>"; };
+		B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEntryView+MoodTracker.swift"; sourceTree = "<group>"; };
+		B89AAEB02D2C168200969943 /* MoodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionView.swift; sourceTree = "<group>"; };
 		B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerHelper.swift; sourceTree = "<group>"; };
 		B89CD7A82D20636C00070F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudePrompts.swift; sourceTree = "<group>"; };
+		B8E8391D2DC683D200B73156 /* StreakManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakManager.swift; sourceTree = "<group>"; };
 		B8EA93232D195C1000158680 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,7 +130,7 @@
 				B8252B522CFF842F0047D01E /* Model */,
 				B8252B4D2CFF83EF0047D01E /* Views */,
 				B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */,
-				B8252B212CFF836F0047D01E /* ContentView.swift */,
+				B8252B212CFF836F0047D01E /* GratitudeListView.swift */,
 				B8252B232CFF836F0047D01E /* Item.swift */,
 				B8252B252CFF83700047D01E /* Assets.xcassets */,
 				B8252B272CFF83700047D01E /* Preview Content */,
@@ -166,11 +168,11 @@
 			isa = PBXGroup;
 			children = (
 				B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */,
-				B8252B502CFF84200047D01E /* PastEntriesView.swift */,
 				B8252B552CFF844C0047D01E /* NewEntryView.swift */,
 				B8EA93232D195C1000158680 /* SplashScreenView.swift */,
 				B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */,
-				B89B7AF22D28641D0057B564 /* NewEntryView2.swift */,
+				B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */,
+				B89AAEB02D2C168200969943 /* MoodSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				B872F4D42D001B3300C58393 /* StorageManager.swift */,
+				B8E8391D2DC683D200B73156 /* StreakManager.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -340,14 +343,15 @@
 			files = (
 				B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */,
 				B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */,
-				B8252B512CFF84200047D01E /* PastEntriesView.swift in Sources */,
 				B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */,
+				B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */,
 				B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */,
 				B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */,
+				B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */,
 				B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */,
+				B89AAEB12D2C168200969943 /* MoodSelectionView.swift in Sources */,
 				B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */,
-				B89B7AF32D28641D0057B564 /* NewEntryView2.swift in Sources */,
-				B8252B222CFF836F0047D01E /* ContentView.swift in Sources */,
+				B8252B222CFF836F0047D01E /* GratitudeListView.swift in Sources */,
 				B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */,
 				B8252B242CFF836F0047D01E /* Item.swift in Sources */,
 				B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */,

@@ -69,7 +69,7 @@ struct GratitudeTimeScreen: View {
         .background(Color.background)
         .ignoresSafeArea(edges: .bottom)
         .fullScreenCover(isPresented: $navigateToContentView) {
-            ContentView()
+            GratitudeListView()
         }
     }
 

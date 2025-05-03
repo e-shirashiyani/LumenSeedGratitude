@@ -14,7 +14,7 @@ struct SplashScreenView: View {
             if isActive {
                 let hasSetGratitudeTime = UserDefaults.standard.bool(forKey: "isGratitudeTimeSet")
                 if hasSetGratitudeTime {
-                    ContentView()
+                    GratitudeListView()
                 } else {
                     GratitudeTimeScreen()
                 }

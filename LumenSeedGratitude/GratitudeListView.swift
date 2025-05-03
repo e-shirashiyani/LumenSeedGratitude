@@ -8,8 +8,14 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct GratitudeListView: View {
     @State private var entries: [GratitudeEntry] = []
+    @State private var currentStreak: Int = 0
+
+    var hasEntryForToday: Bool {
+        let calendar = Calendar.current
+        return entries.contains { calendar.isDateInToday($0.date) }
+    }
     
     var groupedAndSortedEntries: [(key: String, value: [GratitudeEntry])] {
         let grouped = Dictionary(grouping: entries) { entry in
@@ -33,6 +39,30 @@ struct ContentView: View {
                     . multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .padding(.bottom, 10)
+                
+                if currentStreak > 0 {
+                    Text("🌱 Current streak: \(currentStreak) days")
+                        .font(.subheadline)
+                        .foregroundColor(.textSoftGray)
+                        .padding(.bottom, 5)
+                }
+
+                if let badge = streakBadgeText {
+                    Text(badge)
+                        .font(.footnote)
+                        .foregroundColor(.green)
+                        .multilineTextAlignment(.center)
+                        .transition(.opacity)
+                }
+                
+                if !hasEntryForToday && !entries.isEmpty {
+                    Text("You haven’t added anything today yet. What are you grateful for?")
+                        .font(.footnote)
+                        .foregroundColor(.orange)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                        .padding(.bottom, 5)
+                }
                 
                 // Content
                 if entries.isEmpty {
@@ -84,7 +114,7 @@ struct ContentView: View {
                 Spacer()
                 
                 // Navigation Button
-                NavigationLink(destination: NewEntryView2(entries: $entries)) {
+                NavigationLink(destination: NewEntrView_MoodTracker(entries: $entries)) {
                     Text("Add a New Gratitude 🌱")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -101,13 +131,30 @@ struct ContentView: View {
         }
         .onAppear {
             entries = StorageManager.shared.loadEntries()
+            StreakManager.shared.updateStreak(with: entries)
+            currentStreak = StreakManager.shared.getCurrentStreak()
         }
         .onChange(of: entries) { newValue in
             StorageManager.shared.saveEntries(newValue)
+            StreakManager.shared.updateStreak(with: newValue)
+            currentStreak = StreakManager.shared.getCurrentStreak()
+        }
+    }
+    
+    var streakBadgeText: String? {
+        switch currentStreak {
+        case 7:
+            return "🌱 7-day streak! You’re growing strong."
+        case 14:
+            return "🌿 14-day streak! Keep the momentum."
+        case 30:
+            return "🌳 30 days of gratitude! Amazing."
+        default:
+            return nil
         }
     }
 }
+
 #Preview {
-    ContentView()
-    //        .modelContainer(for: Item.self, inMemory: true)
+    GratitudeListView()
 }

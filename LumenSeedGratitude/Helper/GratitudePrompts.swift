@@ -66,3 +66,43 @@ struct GratitudePrompts {
         "I am grateful for the present moment and all it offers."
     ]
 }
+extension GratitudePrompts {
+    static func prompts(for mood: String) -> [String] {
+        switch mood {
+        case "Happy":
+            return [
+                "What’s one small thing today that brought you unexpected joy?",
+                "Who in your life makes you smile effortlessly, and why?",
+                "Reflect on a moment today that made you laugh out loud.",
+                "What is one personal success or achievement you’re proud of right now?",
+                "What’s a little detail you appreciate about your current surroundings?"
+            ]
+        case "Calm":
+            return [
+                "What’s one peaceful moment you experienced today?",
+                "Describe a place that makes you feel serene and why it’s special.",
+                "Who or what helps you feel grounded and steady during your day?",
+                "Reflect on something simple, like the sound of rain or a breeze, that made you feel at ease.",
+                "What’s one thing you’re grateful for that doesn’t demand your attention or effort?"
+            ]
+        case "Stressed":
+            return [
+                "Who or what has supported you during tough times recently?",
+                "What’s one small success you achieved today despite challenges?",
+                "What’s something in your life that gives you strength when you feel overwhelmed?",
+                "Think about a past challenge you overcame. What did it teach you?",
+                "What’s one thing you can let go of right now to feel lighter?"
+            ]
+        case "Sad":
+            return [
+                "Who is someone who has brought comfort or kindness to you recently?",
+                "What’s a happy memory that makes you feel warm and grateful?",
+                "Reflect on something that gives you hope, no matter how small it is.",
+                "What’s one thing about yourself that you’re proud of, even on hard days?",
+                "What’s something beautiful or heartwarming you noticed today, even in sadness?"
+            ]
+        default:
+            return all
+        }
+    }
+}
