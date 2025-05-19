@@ -11,6 +11,7 @@ import SwiftData
 struct GratitudeListView: View {
     @State private var entries: [GratitudeEntry] = []
     @State private var currentStreak: Int = 0
+    @State private var showStreakInfoSheet = false
 
     var hasEntryForToday: Bool {
         let calendar = Calendar.current
@@ -18,14 +19,27 @@ struct GratitudeListView: View {
     }
     
     var groupedAndSortedEntries: [(key: String, value: [GratitudeEntry])] {
-        let grouped = Dictionary(grouping: entries) { entry in
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            return formatter.string(from: entry.date)
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+
+        // Step 1: Sort entries by date descending
+        let sortedEntries = entries.sorted { $0.date > $1.date }
+
+        // Step 2: Group sorted entries by date string
+        let grouped = Dictionary(grouping: sortedEntries) { entry in
+            formatter.string(from: entry.date)
         }
-        return grouped.sorted { $0.key > $1.key }
+
+        // Step 3: Sort grouped sections by date descending
+        return grouped.sorted {
+            guard let date1 = formatter.date(from: $0.key),
+                  let date2 = formatter.date(from: $1.key) else {
+                return false
+            }
+            return date1 > date2
+        }
     }
-    
+
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -41,10 +55,18 @@ struct GratitudeListView: View {
                     .padding(.bottom, 10)
                 
                 if currentStreak > 0 {
-                    Text("🌱 Current streak: \(currentStreak) days")
-                        .font(.subheadline)
-                        .foregroundColor(.textSoftGray)
-                        .padding(.bottom, 5)
+                    Button(action: {
+                        showStreakInfoSheet = true
+                    }) {
+                        HStack(spacing: 4) {
+                            Text("🌱 Current streak: \(currentStreak) days")
+                                .font(.subheadline)
+                                .foregroundColor(.textSoftGray)
+                            Image(systemName: "info.circle")
+                                .foregroundColor(.textSoftGray.opacity(0.7))
+                        }
+                    }
+                    .padding(.bottom, 5)
                 }
 
                 if let badge = streakBadgeText {
@@ -62,6 +84,24 @@ struct GratitudeListView: View {
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                         .padding(.bottom, 5)
+                }
+                let moods = StorageManager.shared.loadMoods()
+
+                if !moods.isEmpty {
+                    NavigationLink(destination: MoodHistoryView(moods: moods)) {
+                        HStack {
+                            Text("🧠 View Mood Trends")
+                                .foregroundColor(.textDarkCharcoal)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.textSoftGray)
+                        }
+                        .padding()
+                        .background(.lumenWhite)
+                        .cornerRadius(10)
+                        .shadow(radius: 1)
+                        .padding(.horizontal)
+                    }
                 }
                 
                 // Content
@@ -129,6 +169,9 @@ struct GratitudeListView: View {
             .background(Color.background)
             .navigationBarHidden(true)
         }
+        .sheet(isPresented: $showStreakInfoSheet) {
+            StreakInfoSheetView(currentStreak: currentStreak)
+        }
         .onAppear {
             entries = StorageManager.shared.loadEntries()
             StreakManager.shared.updateStreak(with: entries)
@@ -153,8 +196,9 @@ struct GratitudeListView: View {
             return nil
         }
     }
+    
 }
 
-#Preview {
-    GratitudeListView()
-}
+//#Preview {
+//    GratitudeListView()
+//}

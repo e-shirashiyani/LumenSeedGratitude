@@ -37,4 +37,35 @@ class StorageManager {
             return []
         }
     }
+    
+    func hasEntryForToday() -> Bool {
+           let entries = loadEntries()
+           let today = Calendar.current.startOfDay(for: Date())
+
+           return entries.contains { Calendar.current.isDate($0.date, inSameDayAs: today) }
+       }
+}
+extension StorageManager {
+    private static let moodsKey = "dailyMoods"
+
+    func saveMood(for date: Date, mood: MoodType) {
+        var moods = loadMoods()
+        let calendar = Calendar.current
+
+        // Remove any existing mood for the same day
+        moods.removeAll { calendar.isDate($0.date, inSameDayAs: date) }
+
+        moods.append(DailyMood(date: date, mood: mood))
+        if let data = try? JSONEncoder().encode(moods) {
+            UserDefaults.standard.set(data, forKey: Self.moodsKey)
+        }
+    }
+
+    func loadMoods() -> [DailyMood] {
+        guard let data = UserDefaults.standard.data(forKey: Self.moodsKey),
+              let moods = try? JSONDecoder().decode([DailyMood].self, from: data) else {
+            return []
+        }
+        return moods
+    }
 }

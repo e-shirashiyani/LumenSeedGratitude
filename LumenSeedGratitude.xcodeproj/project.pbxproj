@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B810F68E2DD458AF00B0E2AA /* MoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F68D2DD458AF00B0E2AA /* MoodType.swift */; };
+		B810F68F2DD458AF00B0E2AA /* MoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F68D2DD458AF00B0E2AA /* MoodType.swift */; };
+		B810F6912DD458BA00B0E2AA /* DailyMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F6902DD458BA00B0E2AA /* DailyMood.swift */; };
+		B810F6922DD458BA00B0E2AA /* DailyMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F6902DD458BA00B0E2AA /* DailyMood.swift */; };
+		B810F6942DD4599C00B0E2AA /* MoodHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B810F6932DD4599C00B0E2AA /* MoodHistoryView.swift */; };
 		B8252B202CFF836F0047D01E /* LumenSeedGratitudeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */; };
 		B8252B222CFF836F0047D01E /* GratitudeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B212CFF836F0047D01E /* GratitudeListView.swift */; };
 		B8252B242CFF836F0047D01E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B232CFF836F0047D01E /* Item.swift */; };
@@ -16,14 +21,13 @@
 		B8252B3D2CFF83700047D01E /* LumenSeedGratitudeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B3C2CFF83700047D01E /* LumenSeedGratitudeUITests.swift */; };
 		B8252B3F2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */; };
 		B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4B2CFF83D40047D01E /* AppDelegate.swift */; };
-		B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */; };
 		B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B532CFF84380047D01E /* GratitudeEntry.swift */; };
-		B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8252B552CFF844C0047D01E /* NewEntryView.swift */; };
 		B872F4D22CFF882A00C58393 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D12CFF882A00C58393 /* Color.swift */; };
 		B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D42D001B3300C58393 /* StorageManager.swift */; };
 		B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */; };
+		B896756E2DD1E98E00D6903C /* StreakInfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */; };
+		B8999E602DDBA37F003CD17D /* GratitudeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */; };
 		B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */; };
-		B89AAEB12D2C168200969943 /* MoodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89AAEB02D2C168200969943 /* MoodSelectionView.swift */; };
 		B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */; };
 		B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */; };
 		B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E8391D2DC683D200B73156 /* StreakManager.swift */; };
@@ -76,6 +80,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B810F68D2DD458AF00B0E2AA /* MoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodType.swift; sourceTree = "<group>"; };
+		B810F6902DD458BA00B0E2AA /* DailyMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMood.swift; sourceTree = "<group>"; };
+		B810F6932DD4599C00B0E2AA /* MoodHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHistoryView.swift; sourceTree = "<group>"; };
 		B8252B1C2CFF836F0047D01E /* LumenSeedGratitude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LumenSeedGratitude.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeApp.swift; sourceTree = "<group>"; };
 		B8252B212CFF836F0047D01E /* GratitudeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeListView.swift; sourceTree = "<group>"; };
@@ -88,14 +95,13 @@
 		B8252B3C2CFF83700047D01E /* LumenSeedGratitudeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeUITests.swift; sourceTree = "<group>"; };
 		B8252B3E2CFF83700047D01E /* LumenSeedGratitudeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumenSeedGratitudeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B8252B4B2CFF83D40047D01E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailView.swift; sourceTree = "<group>"; };
 		B8252B532CFF84380047D01E /* GratitudeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeEntry.swift; sourceTree = "<group>"; };
-		B8252B552CFF844C0047D01E /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
 		B872F4D12CFF882A00C58393 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B872F4D42D001B3300C58393 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeTimeScreen.swift; sourceTree = "<group>"; };
+		B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakInfoSheetView.swift; sourceTree = "<group>"; };
+		B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeChallenge.swift; sourceTree = "<group>"; };
 		B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEntryView+MoodTracker.swift"; sourceTree = "<group>"; };
-		B89AAEB02D2C168200969943 /* MoodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionView.swift; sourceTree = "<group>"; };
 		B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerHelper.swift; sourceTree = "<group>"; };
 		B89CD7A82D20636C00070F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudePrompts.swift; sourceTree = "<group>"; };
@@ -187,7 +193,6 @@
 				B8252B522CFF842F0047D01E /* Model */,
 				B8252B4D2CFF83EF0047D01E /* Views */,
 				B8252B1F2CFF836F0047D01E /* LumenSeedGratitudeApp.swift */,
-				B8252B212CFF836F0047D01E /* GratitudeListView.swift */,
 				B8252B232CFF836F0047D01E /* Item.swift */,
 				B8252B252CFF83700047D01E /* Assets.xcassets */,
 				B8252B272CFF83700047D01E /* Preview Content */,
@@ -224,12 +229,13 @@
 		B8252B4D2CFF83EF0047D01E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B8252B4E2CFF83F70047D01E /* EntryDetailView.swift */,
-				B8252B552CFF844C0047D01E /* NewEntryView.swift */,
+				B8252B212CFF836F0047D01E /* GratitudeListView.swift */,
 				B8EA93232D195C1000158680 /* SplashScreenView.swift */,
 				B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */,
 				B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */,
-				B89AAEB02D2C168200969943 /* MoodSelectionView.swift */,
+				B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */,
+				B810F6932DD4599C00B0E2AA /* MoodHistoryView.swift */,
+				B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				B8252B532CFF84380047D01E /* GratitudeEntry.swift */,
+				B810F68D2DD458AF00B0E2AA /* MoodType.swift */,
+				B810F6902DD458BA00B0E2AA /* DailyMood.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,19 +450,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B810F6942DD4599C00B0E2AA /* MoodHistoryView.swift in Sources */,
 				B8252B4C2CFF83D40047D01E /* AppDelegate.swift in Sources */,
 				B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */,
-				B8252B4F2CFF83F70047D01E /* EntryDetailView.swift in Sources */,
 				B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */,
 				B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */,
 				B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */,
 				B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */,
+				B8999E602DDBA37F003CD17D /* GratitudeChallenge.swift in Sources */,
+				B810F6912DD458BA00B0E2AA /* DailyMood.swift in Sources */,
 				B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */,
-				B89AAEB12D2C168200969943 /* MoodSelectionView.swift in Sources */,
-				B8252B562CFF844C0047D01E /* NewEntryView.swift in Sources */,
 				B8252B222CFF836F0047D01E /* GratitudeListView.swift in Sources */,
+				B896756E2DD1E98E00D6903C /* StreakInfoSheetView.swift in Sources */,
 				B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */,
 				B8252B242CFF836F0047D01E /* Item.swift in Sources */,
+				B810F68E2DD458AF00B0E2AA /* MoodType.swift in Sources */,
 				B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */,
 				B8252B202CFF836F0047D01E /* LumenSeedGratitudeApp.swift in Sources */,
 				B872F4D22CFF882A00C58393 /* Color.swift in Sources */,
@@ -483,8 +493,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8E839442DC68B2000B73156 /* GratitudeEntry.swift in Sources */,
+				B810F6922DD458BA00B0E2AA /* DailyMood.swift in Sources */,
 				B8E839412DC68AE800B73156 /* StorageManager.swift in Sources */,
 				B8E839452DC68E7E00B73156 /* GratitudePrompts.swift in Sources */,
+				B810F68F2DD458AF00B0E2AA /* MoodType.swift in Sources */,
 				B8E839552DC698AD00B73156 /* StreakManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,7 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
@@ -656,12 +668,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -676,7 +689,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
@@ -696,12 +709,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

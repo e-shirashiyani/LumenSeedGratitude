@@ -15,26 +15,35 @@ class StreakManager {
 
     private init() {}
 
-    func updateStreak(with newEntries: [GratitudeEntry]) {
-        guard let latestEntry = newEntries.first else { return }
-        let lastSavedDate = getLastEntryDate()
+    func updateStreak(with entries: [GratitudeEntry]) {
         let calendar = Calendar.current
+        let sortedDates = Array(Set(entries.map { calendar.startOfDay(for: $0.date) })).sorted(by: >)
 
-        if let lastDate = lastSavedDate {
-            if calendar.isDateInYesterday(lastDate) && calendar.isDateInToday(latestEntry.date) == false {
-                incrementStreak()
-            } else if calendar.isDateInToday(lastDate) {
-                // No streak change, already logged today.
-            } else if !calendar.isDateInToday(lastDate) {
-                resetStreak()
-            }
-        } else {
-            incrementStreak()
+        guard !sortedDates.isEmpty else {
+            resetStreak()
+            return
         }
 
-        saveLastEntryDate(latestEntry.date)
-    }
+        var streak = 0
+        var currentDate = calendar.startOfDay(for: Date())
 
+        for date in sortedDates {
+            if calendar.isDate(date, inSameDayAs: currentDate) {
+                streak += 1
+            } else if let yesterday = calendar.date(byAdding: .day, value: -1, to: currentDate),
+                      calendar.isDate(date, inSameDayAs: yesterday) {
+                streak += 1
+                currentDate = yesterday
+            } else {
+                break
+            }
+            currentDate = calendar.date(byAdding: .day, value: -1, to: currentDate)!
+        }
+
+        UserDefaults.standard.set(streak, forKey: streakKey)
+        saveLastEntryDate(sortedDates.first!)
+    }
+    
     private func incrementStreak() {
         let current = UserDefaults.standard.integer(forKey: streakKey)
         UserDefaults.standard.set(current + 1, forKey: streakKey)

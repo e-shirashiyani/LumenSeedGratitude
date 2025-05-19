@@ -24,7 +24,7 @@ struct NewEntrView_MoodTracker: View {
 
     // Mood Selection
     @State private var isMoodSelectionActive: Bool = false
-    @State private var selectedMood: String? = nil
+    @State private var selectedMood: MoodType? = nil
 
     var body: some View {
         NavigationView {
@@ -46,6 +46,27 @@ struct NewEntrView_MoodTracker: View {
                             .multilineTextAlignment(.center)
                     }
                     .padding(.horizontal, 20)
+                    
+                    //  Mood Picker
+                        HStack(spacing: 10) {
+                            Text("Mood:")
+                                .foregroundColor(.textDarkCharcoal)
+                                .font(.headline)
+
+                            ForEach(MoodType.allCases, id: \.self) { mood in
+                                Button(action: {
+                                    selectedMood = mood
+                                }) {
+                                    Text(mood.emoji)
+                                        .font(.title)
+                                        .padding(6)
+                                        .background(selectedMood == mood ? Color.darkBackground.opacity(0.2) : Color.clear)
+                                        .clipShape(Circle())
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    
 
                     ZStack(alignment: .bottomTrailing) {
                         // Gratitude Input
@@ -136,10 +157,19 @@ struct NewEntrView_MoodTracker: View {
                         .opacity(newEntryText.isEmpty ? 0.5 : 1.0)
 
                         Button(action: {
-                            let newEntries = currentSessionEntries.map { GratitudeEntry(id: UUID(), text: $0, date: Date()) }
-                            entries.insert(contentsOf: newEntries, at: 0)
-                            currentSessionEntries.removeAll()
-                            presentationMode.wrappedValue.dismiss()
+                            let now = Date()
+                                let newEntries = currentSessionEntries.map { GratitudeEntry(id: UUID(), text: $0, date: now) }
+                                entries.insert(contentsOf: newEntries, at: 0)
+                                currentSessionEntries.removeAll()
+
+//                                //  Save mood
+                                if let mood = selectedMood {
+                                    StorageManager.shared.saveMood(for: now, mood: mood)
+                                }
+
+                                UserDefaults.standard.set(true, forKey: "hasAddedGratitudeToday")
+                                StreakManager.shared.updateStreak(with: entries)
+                                presentationMode.wrappedValue.dismiss()
                         }) {
                             Text("🎉 Celebrate and Save")
                                 .frame(maxWidth: .infinity)
@@ -179,21 +209,21 @@ struct NewEntrView_MoodTracker: View {
             }
             .navigationBarTitleDisplayMode(.inline)
         }
-        .sheet(isPresented: $isMoodSelectionActive) {
-            MoodSelectionView(selectedMood: $selectedMood, onMoodSelected: handleMoodSelection)
-        }
+//        .sheet(isPresented: $isMoodSelectionActive) {
+//            MoodSelectionView(selectedMood: $selectedMood, onMoodSelected: handleMoodSelection)
+//        }
         .onDisappear {
             promptTimer?.invalidate()
             promptTimer = nil
         }
     }
 
-    private func handleMoodSelection(mood: String) {
-        selectedMood = mood
-        moodBasedPrompts = GratitudePrompts.prompts(for: mood)
-        typingPrompt = moodBasedPrompts.randomElement() ?? "I am grateful for ..."
-        isMoodSelectionActive = false
-    }
+//    private func handleMoodSelection(mood: String) {
+//        selectedMood = mood
+//        moodBasedPrompts = GratitudePrompts.prompts(for: mood)
+//        typingPrompt = moodBasedPrompts.randomElement() ?? "I am grateful for ..."
+//        isMoodSelectionActive = false
+//    }
     
     // Speech Recognition Logic
     private func toggleVoiceInput() {
