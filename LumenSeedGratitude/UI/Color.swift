@@ -6,7 +6,10 @@
 //
 
 import SwiftUI
-
+extension Color {
+    static let cardGradientStart = Color.blue.opacity(0.1)
+    static let cardGradientEnd = Color.lumenGreen.opacity(0.2)
+}
 //extension Color {
 //    static let softBackgroundMint = Color(hex: "#C7E8D1")
 //    static let backgroundMint = Color(hex: "#DFF7E1")

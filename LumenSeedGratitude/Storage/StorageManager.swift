@@ -69,3 +69,35 @@ extension StorageManager {
         return moods
     }
 }
+extension StorageManager {
+    private static let activeChallengesKey = "ActiveChallenges"
+    private static let customChallengesKey = "CustomChallenges"
+
+    func saveActiveChallenges(_ challenges: [GratitudeChallenge]) {
+        if let data = try? JSONEncoder().encode(challenges) {
+            UserDefaults.standard.set(data, forKey: Self.activeChallengesKey)
+        }
+    }
+
+    func loadActiveChallenges() -> [GratitudeChallenge] {
+        guard let data = UserDefaults.standard.data(forKey: Self.activeChallengesKey),
+              let challenges = try? JSONDecoder().decode([GratitudeChallenge].self, from: data) else {
+            return []
+        }
+        return challenges
+    }
+
+    func saveCustomChallenges(_ challenges: [GratitudeChallenge]) {
+        if let data = try? JSONEncoder().encode(challenges) {
+            UserDefaults.standard.set(data, forKey: Self.customChallengesKey)
+        }
+    }
+
+    func loadCustomChallenges() -> [GratitudeChallenge] {
+        guard let data = UserDefaults.standard.data(forKey: Self.customChallengesKey),
+              let challenges = try? JSONDecoder().decode([GratitudeChallenge].self, from: data) else {
+            return []
+        }
+        return challenges
+    }
+}

@@ -26,7 +26,13 @@
 		B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B872F4D42D001B3300C58393 /* StorageManager.swift */; };
 		B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */; };
 		B896756E2DD1E98E00D6903C /* StreakInfoSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */; };
-		B8999E602DDBA37F003CD17D /* GratitudeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */; };
+		B8999E622DDBA9A4003CD17D /* GratitudeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E612DDBA9A4003CD17D /* GratitudeChallenge.swift */; };
+		B8999E632DDBA9A4003CD17D /* GratitudeChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E612DDBA9A4003CD17D /* GratitudeChallenge.swift */; };
+		B8999E672DDBA9F4003CD17D /* AnimatedRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E662DDBA9F4003CD17D /* AnimatedRewardView.swift */; };
+		B8999E6E2DDBBAB2003CD17D /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E6D2DDBBAB2003CD17D /* CircularProgressView.swift */; };
+		B8999E702DDBBE90003CD17D /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E6F2DDBBE90003CD17D /* ConfettiView.swift */; };
+		B8999E722DDBC30D003CD17D /* GratitudeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E712DDBC30D003CD17D /* GratitudeEntryView.swift */; };
+		B8999E742DDBC322003CD17D /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8999E732DDBC322003CD17D /* EditEntryView.swift */; };
 		B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */; };
 		B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */; };
 		B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C96FDE2D21BDA0001BD486 /* GratitudePrompts.swift */; };
@@ -100,7 +106,12 @@
 		B872F4D42D001B3300C58393 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeTimeScreen.swift; sourceTree = "<group>"; };
 		B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakInfoSheetView.swift; sourceTree = "<group>"; };
-		B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeChallenge.swift; sourceTree = "<group>"; };
+		B8999E612DDBA9A4003CD17D /* GratitudeChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeChallenge.swift; sourceTree = "<group>"; };
+		B8999E662DDBA9F4003CD17D /* AnimatedRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedRewardView.swift; sourceTree = "<group>"; };
+		B8999E6D2DDBBAB2003CD17D /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		B8999E6F2DDBBE90003CD17D /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		B8999E712DDBC30D003CD17D /* GratitudeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeEntryView.swift; sourceTree = "<group>"; };
+		B8999E732DDBC322003CD17D /* EditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryView.swift; sourceTree = "<group>"; };
 		B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewEntryView+MoodTracker.swift"; sourceTree = "<group>"; };
 		B89CD7A62D20614000070F26 /* SpeechRecognizerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizerHelper.swift; sourceTree = "<group>"; };
 		B89CD7A82D20636C00070F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +134,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		B8999E6C2DDBB41E003CD17D /* Challenge */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Challenge; sourceTree = "<group>"; };
 		B8E839292DC68A0700B73156 /* LumenSeedWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (B8E8393D2DC68A0900B73156 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = LumenSeedWidget; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -229,13 +241,16 @@
 		B8252B4D2CFF83EF0047D01E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8999E6C2DDBB41E003CD17D /* Challenge */,
 				B8252B212CFF836F0047D01E /* GratitudeListView.swift */,
 				B8EA93232D195C1000158680 /* SplashScreenView.swift */,
 				B88F7CAA2D205A5700758865 /* GratitudeTimeScreen.swift */,
 				B89AAEAE2D2C130600969943 /* NewEntryView+MoodTracker.swift */,
 				B896756D2DD1E98E00D6903C /* StreakInfoSheetView.swift */,
 				B810F6932DD4599C00B0E2AA /* MoodHistoryView.swift */,
-				B8999E5F2DDBA37F003CD17D /* GratitudeChallenge.swift */,
+				B8999E662DDBA9F4003CD17D /* AnimatedRewardView.swift */,
+				B8999E712DDBC30D003CD17D /* GratitudeEntryView.swift */,
+				B8999E732DDBC322003CD17D /* EditEntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +261,7 @@
 				B8252B532CFF84380047D01E /* GratitudeEntry.swift */,
 				B810F68D2DD458AF00B0E2AA /* MoodType.swift */,
 				B810F6902DD458BA00B0E2AA /* DailyMood.swift */,
+				B8999E612DDBA9A4003CD17D /* GratitudeChallenge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -254,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				B872F4D12CFF882A00C58393 /* Color.swift */,
+				B8999E6D2DDBBAB2003CD17D /* CircularProgressView.swift */,
+				B8999E6F2DDBBE90003CD17D /* ConfettiView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -301,6 +319,9 @@
 			);
 			dependencies = (
 				B8E839382DC68A0900B73156 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B8999E6C2DDBB41E003CD17D /* Challenge */,
 			);
 			name = LumenSeedGratitude;
 			productName = LumenSeedGratitude;
@@ -455,18 +476,23 @@
 				B8252B542CFF84380047D01E /* GratitudeEntry.swift in Sources */,
 				B8E8391E2DC683D200B73156 /* StreakManager.swift in Sources */,
 				B89CD7A72D20614000070F26 /* SpeechRecognizerHelper.swift in Sources */,
+				B8999E742DDBC322003CD17D /* EditEntryView.swift in Sources */,
 				B88F7CAB2D205A5700758865 /* GratitudeTimeScreen.swift in Sources */,
 				B89AAEAF2D2C130600969943 /* NewEntryView+MoodTracker.swift in Sources */,
-				B8999E602DDBA37F003CD17D /* GratitudeChallenge.swift in Sources */,
+				B8999E672DDBA9F4003CD17D /* AnimatedRewardView.swift in Sources */,
 				B810F6912DD458BA00B0E2AA /* DailyMood.swift in Sources */,
 				B8EA93242D195C1000158680 /* SplashScreenView.swift in Sources */,
+				B8999E702DDBBE90003CD17D /* ConfettiView.swift in Sources */,
 				B8252B222CFF836F0047D01E /* GratitudeListView.swift in Sources */,
+				B8999E6E2DDBBAB2003CD17D /* CircularProgressView.swift in Sources */,
 				B896756E2DD1E98E00D6903C /* StreakInfoSheetView.swift in Sources */,
 				B8C96FDF2D21BDA0001BD486 /* GratitudePrompts.swift in Sources */,
 				B8252B242CFF836F0047D01E /* Item.swift in Sources */,
 				B810F68E2DD458AF00B0E2AA /* MoodType.swift in Sources */,
 				B872F4D52D001B3300C58393 /* StorageManager.swift in Sources */,
+				B8999E622DDBA9A4003CD17D /* GratitudeChallenge.swift in Sources */,
 				B8252B202CFF836F0047D01E /* LumenSeedGratitudeApp.swift in Sources */,
+				B8999E722DDBC30D003CD17D /* GratitudeEntryView.swift in Sources */,
 				B872F4D22CFF882A00C58393 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +523,7 @@
 				B8E839412DC68AE800B73156 /* StorageManager.swift in Sources */,
 				B8E839452DC68E7E00B73156 /* GratitudePrompts.swift in Sources */,
 				B810F68F2DD458AF00B0E2AA /* MoodType.swift in Sources */,
+				B8999E632DDBA9A4003CD17D /* GratitudeChallenge.swift in Sources */,
 				B8E839552DC698AD00B73156 /* StreakManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +675,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
@@ -668,7 +695,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -689,7 +716,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LumenSeedGratitude/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PFG66P4HF;
 				ENABLE_PREVIEWS = YES;
@@ -709,7 +736,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lumenseed.gratiflow.unique;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
